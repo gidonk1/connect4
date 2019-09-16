@@ -4,6 +4,7 @@ Play connect4 against your friends or the computer!
 ## Getting Started
 No prerequisites - just clone the project.
 \
+\
 Adjust the depth the AI searches in the game tree in the 'ComputerPlayer' class, and simply start the 
 application by running 'main'.
 
