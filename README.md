@@ -5,7 +5,6 @@ Play connect4 against your friends or the computer!
 No prerequisites - just clone the project and you are good to go. 
 
 ## Implementation
-\
 Built using Java.
 \
 \
