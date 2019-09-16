@@ -17,7 +17,7 @@ Graphics made using the Java Swing API.
 \
 Computer AI finds best move using minimax algorithm with alpha-beta pruning. The heuristic evaluation method 
 counts number of possible 4-in-a-rows each player can still make and weights them accordingly. Weights of 
-possible '4-in-a-rows' (+ for comp and - for opp) are as follows:
+possible '4-in-a-rows' (+ for computer and - for opponent) are as follows:
 * 1000 if possible '4-in-a-row' has 4 of same colour
 * 100 if possible '4-in-a-row' has 3 of same colour
 * 10 if possible '4-in-a-row' has 2 of same colour
