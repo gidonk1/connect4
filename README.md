@@ -1,5 +1,5 @@
 # connect4
-Play connect4 against your friend or the computer! 
+Play connect4 against your friends or the computer! 
 
 ## Getting Started
 No prerequisites - just clone the project and you are good to go. 
