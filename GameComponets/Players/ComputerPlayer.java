@@ -8,7 +8,7 @@ import java.util.List;
 
 public final class ComputerPlayer extends AbstractPlayer {
 
-    private static final int depth = 8; // max depth when searching game tree
+    private static final int depth = 9; // max depth when searching game tree
     private Player opponent;
 
     public ComputerPlayer(Colour colour, Board board, Player opponent) {
@@ -79,14 +79,14 @@ public final class ComputerPlayer extends AbstractPlayer {
         return new int[]{(isMax) ? alpha : beta, bestColumn};
     }
 
-    // The heuristic evaluation function for the current board is to count number of
-    // possible 4-in-a-rows each player can still make and weight them accordingly.
+    // The heuristic evaluation method for the current board is to count number of
+    // possible 4-in-a-rows each player can still make and weights them accordingly.
 
-    // Weight of possible 4-in-a-rows:
-    // 1000 if possible 4-in-a-row has 4-in-a-row
-    // 100 if possible 4-in-a-row has 3-in-a-row
-    // 10 if possible 4-in-a-row has 2-in-a-row
-    // 1 if possible 4-in-a-row has 1-in-a-row
+    // Weights of possible 4-in-a-rows (+ for comp and - for opp):
+    // 1000 if possible 4-in-a-row has 4 of same colour
+    // 100 if possible 4-in-a-row has 3 of same colour
+    // 10 if possible 4-in-a-row has 2 of same colour
+    // 1 if possible 4-in-a-row has 1 of same colour
     private int evaluate(Board boardCopy) {
 
         int score = 0;
@@ -139,10 +139,10 @@ public final class ComputerPlayer extends AbstractPlayer {
     }
 
     // Given an array of 4 pieces, it returns the following score (+ for comp and - for opp):
-    // 1000 if possible 4-in-a-row has 4-in-a-row
-    // 100 if possible 4-in-a-row has 3-in-a-row
-    // 10 if possible 4-in-a-row has 2-in-a-row
-    // 1 if possible 4-in-a-row has 1-in-a-row
+    // 1000 if possible 4-in-a-row has 4 of same colour
+    // 100 if possible 4-in-a-row has 3 of same colour
+    // 10 if possible 4-in-a-row has 2 of same colour
+    // 1 if possible 4-in-a-row has 1 of same colour
     private int evaluatePossible4InARow(Piece[] pieces) {
 
         assert pieces.length == 4 : "length must be 4";
